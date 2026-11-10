@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0e16">
+  <meta name="description" content="LUMEN — platformă demonstrativă care transformă lecțiile clasei în jocuri de învățare.">
+  <title>LUMEN — învățarea prinde joc</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="game-studio.css">
+  <link rel="stylesheet" href="escape-rooms-3d.css">
+  <link rel="stylesheet" href="mini-games.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#acasa" aria-label="LUMEN, pagina principală">
+        <span class="brand-mark"><i></i><i></i><i></i><i></i></span>
+        <span class="brand-name">lumen<span class="brand-dot">.</span><small>LEARN TOGETHER</small></span>
+      </a>
+      <div class="school-switch"><span class="school-avatar">ȘD</span><span><strong id="schoolNameSidebar">Școala Demo</strong><small id="sidebarClass">Clasa a VII-a B</small></span><span class="chevron">⌄</span></div>
+      <div class="side-label">SPAȚIUL MEU</div>
+      <nav class="main-nav" aria-label="Navigare principală">
+        <button class="nav-item active" data-view="acasa"><span class="nav-icon">⌂</span> Acasă <span class="nav-pip"></span></button>
+        <button class="nav-item" data-view="exploreaza"><span class="nav-icon">◈</span> Explorează <span class="nav-count">16</span></button>
+        <button class="nav-item" data-view="progres"><span class="nav-icon">◷</span> Progresul meu</button>
+        <button class="nav-item" data-view="clasa"><span class="nav-icon">♧</span> Comunitatea clasei</button>
+      </nav>
+      <div class="side-label subject-label">MATERIILE MELE <button id="addSubject" aria-label="Vezi materiile">+</button></div>
+      <div class="subject-list">
+        <button data-filter="Toate" class="subject-row selected"><span class="subject-glyph all-glyph">✳</span> Toate materiile <span>16</span></button>
+        <button data-filter="Limba română" class="subject-row"><span class="subject-glyph s-rose">Aa</span> Limba română</button>
+        <button data-filter="Matematică" class="subject-row"><span class="subject-glyph s-blue">∑</span> Matematică</button>
+        <button data-filter="Istorie" class="subject-row"><span class="subject-glyph s-amber">◷</span> Istorie</button>
+        <button data-filter="Biologie" class="subject-row"><span class="subject-glyph s-green">❋</span> Biologie</button>
+        <button data-filter="Geografie" class="subject-row"><span class="subject-glyph s-cyan">⌖</span> Geografie</button>
+        <button data-filter="Engleză" class="subject-row"><span class="subject-glyph s-violet">EN</span> Engleză</button>
+        <button data-filter="Fizică" class="subject-row"><span class="subject-glyph s-orange">ϟ</span> Fizică</button>
+        <button data-filter="Dirigenție" class="subject-row"><span class="subject-glyph s-pink">♡</span> Dirigenție</button>
+      </div>
+      <div class="sidebar-bottom">
+        <div class="teacher-card"><div class="teacher-orb">✦</div><strong>Ești profesor?</strong><p>Transformă o lecție în aventura clasei.</p><button class="teacher-cta" id="teacherUpload">＋ Încarcă o lecție</button></div>
+        <button class="profile-row"><span class="profile-pic">AM</span><span><strong>Alexandra M.</strong><small>Explorator · nivel 8</small></span><span class="profile-menu">•••</span></button>
+      </div>
+    </aside>
+
+    <main class="main-area" id="acasa">
+      <header class="topbar"><div class="breadcrumb"><span id="schoolNameTop">Școala Demo</span><b>/</b><strong id="crumbCurrent">Acasă</strong></div><div class="top-actions"><label class="class-picker"><span>CLASA</span><select id="classSelector" aria-label="Selectează clasa"><option value="V-A">V-A</option><option value="V-B">V-B</option><option value="VI-A">VI-A</option><option value="VI-B">VI-B</option><option value="VII-A">VII-A</option><option value="VII-B" selected>VII-B</option><option value="VIII-A">VIII-A</option><option value="VIII-B">VIII-B</option></select></label><span class="demo-pill"><i></i> MOD DEMO</span><button class="icon-button" id="themeToggle" aria-label="Schimbă tema" title="Schimbă tema">☼</button><button class="streak-pill"><span>♨</span><strong>4 zile</strong><small>la rând</small></button><button class="avatar-button">AM</button></div></header>
+      <div class="content-wrap">
+        <section class="welcome-row"><div><div class="eyebrow"><span class="eyebrow-line"></span> MARȚI, 10 NOIEMBRIE 2026 <span class="eyebrow-spark">✦</span></div><h1 id="greeting">Bună, Alexandra <span class="wave">✦</span></h1><p class="welcome-sub">Ai idei mari. Hai să le dăm un pic de <em>joacă.</em></p></div><button class="soft-button" id="weeklyButton"><span>▦</span> Programul clasei <span class="arrow">↗</span></button></section>
+
+        <section class="hero-card">
+          <div class="hero-noise"></div><div class="hero-content"><div class="hero-kicker"><span class="live-dot"></span> AVENTURA SĂPTĂMÂNII <span class="hero-tag">#01</span></div><h2>Micile alegeri,<br><span>schimbări mari.</span></h2><p>O clasă mai bună începe cu fiecare dintre noi.<br>Descoperă cum, jucând.</p><div class="hero-meta"><span>♡ Dirigenție</span><i></i><span>12 min</span><i></i><span>5 provocări</span></div><button class="hero-play" data-play="d1"><span class="play-triangle">▶</span> Începe aventura <b>→</b></button><div class="hero-footnote">O aventură creată pentru clasa a VII-a B</div></div>
+          <div class="hero-art" aria-hidden="true"><div class="orbit orbit-1"></div><div class="orbit orbit-2"></div><div class="orbit orbit-3"></div><div class="planet"><div class="planet-shine"></div><div class="planet-ring"></div><span class="planet-star star-a">✦</span><span class="planet-star star-b">✧</span><span class="planet-star star-c">·</span><div class="planet-base"></div></div><div class="float-card float-card-top"><span class="float-icon pink">♡</span><span><small>O CLASĂ MAI BUNĂ</small><strong>începe cu tine</strong></span><span class="float-check">✓</span></div><div class="float-card float-card-bottom"><span class="float-icon gold">✦</span><span><small>ECHIPA TA</small><strong>7B <em>·</em> împreună</strong></span><div class="tiny-avatars"><i>A</i><i>M</i><i>+</i></div></div><div class="sparkle sp1">✦</div><div class="sparkle sp2">·</div><div class="sparkle sp3">✧</div><div class="hero-orbit-label">AICI CREȘTEM<br>ÎMPREUNĂ</div></div>
+          <div class="hero-index">01 <span>/</span> 04</div>
+        </section>
+
+        <section class="escape3d-section" id="camere3d" aria-labelledby="escape3dTitle">
+          <div class="section-head escape3d-head"><div><div class="section-eyebrow">TREI EXPERIENȚE · TREI FELURI DE A ÎNVĂȚA</div><h2 id="escape3dTitle">Explorează. Construiește. <span>Descoperă.</span></h2><p>Un escape room 3D amplu, o rețea ecologică de conectat și un atelier unde ecuațiile se rezolvă pe balanță.</p></div><span class="escape3d-mark"><i></i> WEBGL · JOCURI INTERACTIVE</span></div>
+          <div class="escape3d-grid">
+            <article class="escape3d-card archive-card"><div class="escape3d-preview" aria-hidden="true"><div class="room-frame"><i class="room-wall"></i><i class="room-floor"></i><i class="room-door"></i><i class="room-desk"></i><i class="room-lamp"></i><i class="room-shelf"></i></div><span class="preview-coordinate">ARHIVA DACIEI · 3 CAMERE</span><span class="preview-number">01</span></div><div class="escape3d-card-info"><div class="escape3d-meta"><span>ISTORIE · ESCAPE ROOM 3D</span><span>25–35 MIN</span></div><h3>Arhiva celor trei sigilii</h3><p>Trei camere succesive, 12 indicii și puzzle-uri de cod, cronologie și asociere istorică.</p><button data-room-open="archive">Intră în escape room <b>↗</b></button></div></article>
+            <article class="escape3d-card ecosystem-card"><div class="ecosystem-preview" aria-hidden="true"><span class="eco-orbit eco-a">🌿</span><span class="eco-orbit eco-b">🐇</span><span class="eco-orbit eco-c">🦊</span><span class="eco-link eco-link-a"></span><span class="eco-link eco-link-b"></span><span class="eco-core">↗</span><span class="preview-number">02</span><span class="preview-coordinate">REȚEA TROFICĂ · SIMULARE</span></div><div class="escape3d-card-info"><div class="escape3d-meta"><span>BIOLOGIE · REȚEA ECOLOGICĂ</span><span>10–15 MIN</span></div><h3>Rețeaua vie</h3><p>Conectează relațiile de hrănire, apoi schimbă resursele și urmărește efectul în model.</p><button data-game-open="ecosystem">Construiește rețeaua <b>↗</b></button></div></article>
+            <article class="escape3d-card equation-card"><div class="equation-preview" aria-hidden="true"><span class="eq-pan eq-left">x + 7</span><span class="eq-fulcrum">＝</span><span class="eq-pan eq-right">12</span><span class="eq-balance"></span><span class="preview-number">03</span><span class="preview-coordinate">ATELIER DE ECUAȚII · NIVEL 3</span></div><div class="escape3d-card-info"><div class="escape3d-meta"><span>MATEMATICĂ · ATELIER LOGIC</span><span>8–12 MIN</span></div><h3>Balanța necunoscutei</h3><p>Aplică operații pe ambele talere și rezolvă trei ecuații fără să pierzi egalitatea.</p><button data-game-open="equation">Intră în atelier <b>↗</b></button></div></article>
+          </div>
+          <div class="escape3d-controls-note"><span>W A S D</span> deplasare <i></i><span>mouse</span> mișcă-l pentru a roti camera — fără clic apăsat <i></i><span>E</span> cercetează indiciul apropiat <i></i><span>ESC</span> închide jocul</div>
+        </section>
+
+        <section class="stats-grid" aria-label="Progresul tău"><article class="stat-card"><div class="stat-top"><span class="stat-icon violet-bg">✧</span><span class="stat-trend">+12% <i>↗</i></span></div><div class="stat-value">2 480 <small>XP</small></div><div class="stat-label">Puncte de explorator</div><div class="stat-progress"><span style="width:72%"></span></div><div class="stat-hint">Mai ai <b>520 XP</b> până la nivelul 9</div></article><article class="stat-card"><div class="stat-top"><span class="stat-icon mint-bg">✓</span><span class="stat-meta">DIN 20</span></div><div class="stat-value">14 <small>/ 20</small></div><div class="stat-label">Lecții explorate</div><div class="mini-bars"><i style="height:38%"></i><i style="height:58%"></i><i style="height:46%"></i><i style="height:78%"></i><i style="height:62%"></i><i style="height:100%"></i><i style="height:76%"></i></div><div class="stat-hint">Săptămâna aceasta <b>+3 lecții</b></div></article><article class="stat-card rank-card"><div class="stat-top"><span class="stat-icon gold-bg">♛</span><span class="rank-season">SĂPTĂMÂNA 46</span></div><div class="stat-value">#<span>07</span></div><div class="stat-label">În clasamentul clasei</div><div class="rank-people"><span class="rank-face face1">IR</span><span class="rank-face face2">MV</span><span class="rank-face face3">AD</span><span class="rank-copy">Ești la <b>180 XP</b> de locul 5</span></div><div class="stat-hint">Clasamentul se resetează luni</div></article></section>
+
+        <section class="section-head"><div><div class="section-eyebrow">ALESE PENTRU TINE</div><h2>Continuă-ți aventura <span>↗</span></h2><p>Lecții transformate în misiuni. Progresul tău te așteaptă.</p></div><button class="text-button" id="allLessons">Vezi toate <span>→</span></button></section>
+        <div class="lesson-grid featured-grid" id="featuredGrid"></div>
+
+        <section class="library-section" id="exploreaza"><div class="section-head library-head"><div><div class="section-eyebrow">HARTA CUNOAȘTERII</div><h2>Ce explorăm azi?</h2><p>Alege o materie. Fiecare lecție ascunde o aventură.</p></div><div class="library-actions"><label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Caută o lecție..." aria-label="Caută o lecție"></label><button class="filter-button" id="filterButton">☷ <span>Filtrează</span></button></div></div><div class="filter-chips" id="filterChips"><button class="filter-chip chosen" data-chip="Toate">Toate <span>16</span></button><button class="filter-chip" data-chip="Limba română">Limba română</button><button class="filter-chip" data-chip="Matematică">Matematică</button><button class="filter-chip" data-chip="Științe">Științe</button><button class="filter-chip" data-chip="Societate">Societate</button><button class="filter-chip" data-chip="Limbi străine">Limbi străine</button></div><div class="curriculum-note"><span>◎</span><div><strong>Materia și clasa se aleg la pregătirea jocului.</strong><small>Jocurile generate pornesc din textul lecției și din capitolul de manual selectate de profesor.</small></div><a href="https://www.edu.ro/Ordin_ministru_3393_2017" target="_blank" rel="noopener">Programa oficială ↗</a></div><div class="lesson-grid" id="lessonGrid"></div><div class="empty-state" id="emptyState" hidden><span>⌕</span><strong>N-am găsit încă o aventură</strong><p>Încearcă alt cuvânt sau alege o altă materie.</p></div></section>
+
+        <section class="bottom-grid"><article class="class-card"><div class="section-eyebrow">ÎMPREUNĂ, MAI DEPARTE</div><h2>Clasa noastră<br><span>strălucește.</span></h2><p>Fiecare joc aduce puncte pentru echipa <span id="classTeamLabel">VII-B</span>. Uite ce-am reușit împreună săptămâna asta.</p><div class="class-progress-label"><span>Progresul clasei</span><b>68%</b></div><div class="class-progress"><span></span></div><div class="class-footer"><span>✨ 13 elevi au contribuit</span><button id="classDetails">Vezi echipa →</button></div><div class="class-orb orb1"></div><div class="class-orb orb2"></div></article><article class="upload-card"><div class="upload-illustration"><span class="upload-glow"></span><span class="upload-paper">▤</span><span class="upload-spark">✦</span></div><div class="section-eyebrow">PENTRU PROFESORI</div><h2>O lecție nouă.<br><span>O aventură nouă.</span></h2><p>Încarcă materialul clasei și pregătește o provocare pe care elevii tăi o vor ține minte.</p><button class="upload-open" id="uploadOpen"><span>＋</span> Încarcă o lecție <b>→</b></button><div class="upload-note"><span>◈</span> TXT, MD sau lipește textul <i>·</i> demo local</div></article></section>
+        <footer class="footer"><a class="footer-brand" href="#acasa">lumen<span>.</span></a><span>Un demo educațional pentru Olimpiada Națională de Dirigenție</span><span class="footer-right"><i></i> <span id="footerClassLabel">CLASA VII-B</span></span></footer>
+      </div>
+    </main>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="modal-backdrop" id="modalBackdrop" hidden><section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="modal-close" id="modalClose" aria-label="Închide">×</button><div id="modalContent"></div></section></div>
+  <input type="file" id="fileInput" accept=".pdf,.ppt,.pptx,.doc,.docx,.txt" hidden>
+  <script src="app.js"></script>
+  <script src="game-engine.js"></script>
+  <script src="teacher-studio.js"></script>
+  <script src="game-builder.js"></script>
+  <script src="escape-rooms-3d.js"></script>
+  <script src="mini-games.js"></script>
+</body>
+</html>
